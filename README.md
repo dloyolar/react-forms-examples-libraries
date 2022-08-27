@@ -6,7 +6,7 @@ The idea is made the same forms with Formik and React Hook Form using Yup as hel
 
 ## Technologies
 
-I used `React`, `Formik`, `React Hook Form`, `Yup`, `Vite`
+I used `React`, `Formik`, `React Hook Form`, `Yup`, `Chakra UI`, `Vite`
 
 ## Setup
 
