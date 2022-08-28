@@ -1,5 +1,6 @@
-import { Box, Center, HStack, StackDivider, Text } from '@chakra-ui/react';
-import { FormikForm } from './components/FormikForm';
+import { Box, Center, HStack, StackDivider } from '@chakra-ui/react';
+import { FormikForm } from './components/Formik/FormikForm';
+import { ReactHookForm } from './components/React-Hook-Form/ReactHookForm';
 
 function App() {
   return (
@@ -9,9 +10,7 @@ function App() {
           <FormikForm />
         </Box>
         <Box>
-          <Text fontSize="2xl" align="center">
-            React Hook Form Version (WIP)
-          </Text>
+          <ReactHookForm />
         </Box>
       </HStack>
     </Center>
