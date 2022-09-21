@@ -1,4 +1,4 @@
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import {
   Box,
@@ -13,6 +13,7 @@ import {
 } from '@chakra-ui/react';
 import { FormikErrorMsg } from './FormikErrorMsg';
 import { PasswordInput } from './FormikPasswordInput';
+import { InputField } from './InputField';
 
 export const FormikForm = () => {
   const initialForm = {
@@ -55,23 +56,11 @@ export const FormikForm = () => {
         {({ getFieldProps, errors, touched }) => (
           <Form>
             <Stack spacing="5">
-              <FormControl isInvalid={!!errors.firstName && touched.firstName}>
-                <FormLabel>First Name</FormLabel>
-                <Field name="firstName" as={Input} />
-                <FormikErrorMsg name="firstName" />
-              </FormControl>
+              <InputField name="firstName" label="First Name" />
 
-              <FormControl isInvalid={!!errors.lastName && touched.lastName}>
-                <FormLabel>Last Name</FormLabel>
-                <Field name="lastName" as={Input} />
-                <FormikErrorMsg name="lastName" />
-              </FormControl>
+              <InputField name="lastName" label="Last Name" />
 
-              <FormControl isInvalid={!!errors.email && touched.email}>
-                <FormLabel>Email</FormLabel>
-                <Field name="email" as={Input} />
-                <FormikErrorMsg name="email" />
-              </FormControl>
+              <InputField name="email" label="Email" />
 
               <FormControl isInvalid={!!errors.password1 && touched.password1}>
                 <PasswordInput label="Password" name="password1" />
